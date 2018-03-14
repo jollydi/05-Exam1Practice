@@ -233,10 +233,10 @@ def problem0b(n):
     ####################################################################
     # ------------------------------------------------------------------
 
-    count =0
-    for k in range(2, n+1):
+    count = 0
+    for k in range(2, n + 1):
         result = is_prime(k)
-        if result == True:
+        if result is True:
             count = count + 1
     return count
 
