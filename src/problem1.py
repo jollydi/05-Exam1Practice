@@ -26,6 +26,9 @@ Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
 ########################################################################
 
 
+import math
+
+
 def main():
     """ Calls the   TEST   functions in this module. """
     run_test_problem1a()
@@ -92,7 +95,7 @@ def sum_of_digits(number):
 def run_test_problem1a():
     """ Tests the   problem1a   function. """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # DONE: 2. Implement this TEST function.
     #   It TESTS the  problem1a  function defined below.
     #   Include at least **   4   ** tests (we wrote two for you).
     # ------------------------------------------------------------------
@@ -125,6 +128,20 @@ def run_test_problem1a():
     # Below this comment, add 2 more test cases of your own choosing.
     # ------------------------------------------------------------------
 
+    # Test 3:
+    expected = 1.135  # This is APPROXIMATELY the correct answer.
+    answer = problem1a(1, -2)
+    print()
+    print('Test 3 expected:', expected, '(approximately)')
+    print('       actual:  ', answer)
+
+    # Test 4:
+    expected = -1.786  # This is APPROXIMATELY the correct answer.
+    answer = problem1a(5, 12)
+    print()
+    print('Test 4 expected:', expected, '(approximately)')
+    print('       actual:  ', answer)
+
 
 def problem1a(m, n):
     """
@@ -152,6 +169,11 @@ def problem1a(m, n):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   10 minutes.
     # ------------------------------------------------------------------
+
+    count = 0
+    for k in range(m,n + 1):
+        sin_square = math.sin(k ** 2)
+        count = count + sin_square
 
 
 def run_test_problem1b():
